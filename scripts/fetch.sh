@@ -3,9 +3,9 @@ set -e # Exit with nonzero exit code if anything fails
 
 rm -rf ./generated
 mkdir -p ./generated/loaders
-cp -rf ./content/loaders/ ./generated/loaders
+cp -rf ./content/documentation/loaders/ ./generated/loaders
 mkdir -p ./generated/plugins
-cp -rf ./content/plugins/ ./generated/plugins
+cp -rf ./content/documentation/plugins/ ./generated/plugins
 
 # Fetches github.com/webpack/*-loader repositories.
 # Skipped because they are below contrib now.
