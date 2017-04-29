@@ -352,7 +352,7 @@ module.exports = function(env) {
 };
 ```
 
-See [CLI](/api/cli).
+See [CLI](/documentation/api/cli).
 
 
 ## `require.ensure` and AMD `require` are asynchronous
