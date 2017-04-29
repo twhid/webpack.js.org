@@ -38,7 +38,7 @@ A Rule can be separated into three parts — Conditions, Results and nested Rule
 
 There are two input values for the conditions:
 
-1. The resource: An absolute path to the file requested. It's already resolved according the [`resolve` rules](/configuration/resolve).
+1. The resource: An absolute path to the file requested. It's already resolved according the [`resolve` rules](/documentation/configuration/resolve).
 
 2. The issuer: An absolute path to the file of the module which requested the resource. It's the location of the import.
 
@@ -154,7 +154,7 @@ parser: {
   browserify: false, // disable special handling of Browserify bundles
   requireJs: false, // disable requirejs.*
   node: false, // disable __dirname, __filename, module, require.extensions, require.main, etc.
-  node: {...} // reconfigure [node](/configuration/node) layer on module level
+  node: {...} // reconfigure [node](/documentation/configuration/node) layer on module level
 }
 ```
 
@@ -249,7 +249,7 @@ Conditions can be one of these:
 
 `object`
 
-It must have a `loader` property being a string. It is resolved relative to the configuration [`context`](/configuration/entry-context#context) with the loader resolving options ([resolveLoader](/configuration/resolve#resolveloader)).
+It must have a `loader` property being a string. It is resolved relative to the configuration [`context`](/documentation/configuration/entry-context#context) with the loader resolving options ([resolveLoader](/documentation/configuration/resolve#resolveloader)).
 
 It can have a `options` property being a string or object. This value is passed to the loader, which should interpret it as loader options.
 
