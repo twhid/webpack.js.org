@@ -43,7 +43,7 @@ module.exports = {
 };
 ```
 
-This plugin is also capable of providing only a certain export of a module by configuring it with an array path using this format: `[module, child, ...children?]`. 
+This plugin is also capable of providing only a certain export of a module by configuring it with an array path using this format: `[module, child, ...children?]`.
 
 The following configuration will correctly import function `__assign` from TypeScript's `tslib` package, and provide it wherever it's invoked.
 

@@ -341,7 +341,7 @@ The output will be something like this:
 
 ```javascript
 define([], function() {
-	//what this module returns is what your entry chunk returns
+    //what this module returns is what your entry chunk returns
 });
 ```
 
@@ -355,8 +355,8 @@ But, `require([ _what?_ ])`?
 
 ```javascript
 output: {
-	library: "MyLibrary",
-	libraryTarget: "amd"
+    library: "MyLibrary",
+    libraryTarget: "amd"
 }
 ```
 
@@ -364,7 +364,7 @@ So your module will be like:
 
 ```javascript
 define("MyLibrary", [], function() {
-	//what this module returns is what your entry chunk returns
+    //what this module returns is what your entry chunk returns
 });
 ```
 
@@ -373,7 +373,7 @@ And you can use it like this:
 ```javascript
 // And then your users will be able to do:
 require(["MyLibrary"], function(MyLibrary){
-	MyLibrary.doSomething();
+    MyLibrary.doSomething();
 });
 ```
 
@@ -384,8 +384,8 @@ In this case, you need the `library` property to name your module:
 
 ```javascript
 output: {
-	library: "MyLibrary",
-	libraryTarget: "umd"
+    library: "MyLibrary",
+    libraryTarget: "umd"
 }
 ```
 
@@ -393,16 +393,16 @@ And finally the output is:
 
 ```javascript
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define("MyLibrary", [], factory);
-	else if(typeof exports === 'object')
-		exports["MyLibrary"] = factory();
-	else
-		root["MyLibrary"] = factory();
+    if(typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory();
+    else if(typeof define === 'function' && define.amd)
+        define("MyLibrary", [], factory);
+    else if(typeof exports === 'object')
+        exports["MyLibrary"] = factory();
+    else
+        root["MyLibrary"] = factory();
 })(this, function() {
-	//what this module returns is what your entry chunk returns
+    //what this module returns is what your entry chunk returns
 });
 ```
 

@@ -156,7 +156,7 @@ And from our package.json, where we build our application using webpack, the com
  "build:dist": "webpack --env=prod --progress --profile --colors",
 ```
 
-You can see that we passed the environment variable to our webpack.config.js file. 
+You can see that we passed the environment variable to our webpack.config.js file.
 The environment variable is then passed to `buildConfig` method which simply loads the right js file for the build.
 
 An advanced approach would be to have a base configuration file, put in all common functionalities, and then have environment specific files and simply use 'webpack-merge' to merge them. This would help to avoid code repetitions.
