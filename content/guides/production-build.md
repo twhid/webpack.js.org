@@ -21,7 +21,7 @@ This page explains how to generate production builds with webpack.
 Running `webpack -p` (or equivalently `webpack --optimize-minimize --define process.env.NODE_ENV="'production'"`). This performs the following steps:
 
 - Minification using `UglifyJsPlugin`
-- Runs the `LoaderOptionsPlugin`, see its [documentation](/plugins/loader-options-plugin)
+- Runs the `LoaderOptionsPlugin`, see its [documentation](/documentation/plugins/loader-options-plugin)
 - Sets the Node environment variable
 
 
@@ -57,7 +57,7 @@ One of the good options to go is using `cheap-module-source-map` which simplifie
 
 ### Node environment variable
 
-Running `webpack -p` (or `--define process.env.NODE_ENV="'production'"`) invokes the [`DefinePlugin`](/plugins/define-plugin) in the following way:
+Running `webpack -p` (or `--define process.env.NODE_ENV="'production'"`) invokes the [`DefinePlugin`](/documentation/plugins/define-plugin) in the following way:
 
 ```js
 // webpack.config.js
